@@ -18,7 +18,9 @@ sidebar_position: 1
 ## 在线体验
 - admin/admin123
 
-演示地址：https://vben5.go-atlas.cn/
+演示地址：
++ https://vben5.go-atlas.dev/
++ https://vue3.go-atlas.dev/
 
 ## 快速启动（开发环境）
 > 后端需安装 Go 1.24+，数据库为 MySQL（推荐 8.0+）
