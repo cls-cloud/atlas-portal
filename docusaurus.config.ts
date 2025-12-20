@@ -5,7 +5,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'Atlas-Zero',
+  title: 'ovra-zero',
   tagline: '基于 go-zero 实现的多租户后台管理系统',
   favicon: 'img/favicon.ico',
 
@@ -73,7 +73,7 @@ const config: Config = {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
     navbar: {
-      title: 'Atlas-Zero',
+      title: 'ovra-zero',
       logo: {
         alt: 'Logo',
         src: 'img/logo.svg',
@@ -87,7 +87,7 @@ const config: Config = {
         },
         // {to: '/blog', label: 'Blog', position: 'left'},
         {
-          href: 'https://github.com/cls-cloud/atlas-zero',
+          href: 'https://github.com/cls-cloud/ovra-zero',
           label: 'GitHub',
           position: 'right',
         },
@@ -136,7 +136,7 @@ const config: Config = {
         //   ],
         // },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Atlas, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} ovra, Inc. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,

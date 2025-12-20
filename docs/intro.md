@@ -20,7 +20,6 @@ sidebar_position: 1
 
 演示地址：
 + https://vben5.go-atlas.dev/
-+ https://vue3.go-atlas.dev/
 
 ## 快速启动（开发环境）
 > 后端需安装 Go 1.24+，数据库为 MySQL（推荐 8.0+）
@@ -32,25 +31,20 @@ sidebar_position: 1
 ```shell
 # 克隆后端代码
 git clone https://github.com/cls-cloud/atlas-zero.git
-cd atlas-zero/app/toolkit && go mod tidy
-cd atlas-zero/app/system && go mod tidy
-cd atlas-zero/app/monitor && go mod tidy
-cd atlas-zero/app/resource && go mod tidy
+make init
 ```
 
 ### 服务启动
 > 配置文件 项目目录的etc目录下(*.yaml) 
 ```bash
-cd atlas-zero/app/system && go run system.go
-cd atlas-zero/app/monitor && go run monitor.go
-cd atlas-zero/app/resource && go run resource.go
+make init && make build-all && make back-all
 ```
 
 ### 网关运行
 > 网关使用traefik，下载地址：https://github.com/traefik/traefik/releases
-> 下载系统对应版本的traefik，解压后放在bin/app/traefik目录下
+> 下载系统对应架构的traefik(3.6.5)，解压后放在bin/app/traefik目录下
 ```shell
-cd atlas-zero/app
+cd ovra-zero
 ./bin/traefik/traefik --configfile=./bin/traefik/traefik.yaml
 ```
 
