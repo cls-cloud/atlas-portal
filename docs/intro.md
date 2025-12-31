@@ -19,13 +19,14 @@ sidebar_position: 1
 - admin/admin123
 
 演示地址：
-+ https://vben5.go-atlas.dev/
++ https://vben5.ovra.dev/
 
 ## 快速启动（开发环境）
 > 后端需安装 Go 1.24+，数据库为 MySQL（推荐 8.0+）
 
 ### 检查所需环境
-> golang、mysql、redis、etcd
+> + golang、mysql、redis、etcd
+> + etcd、mysql、redis为运行时必须
 
 ### 安装依赖
 ```shell
@@ -41,8 +42,9 @@ make init && make build-all && make back-all
 ```
 
 ### 网关运行
-> 网关使用traefik，下载地址：https://github.com/traefik/traefik/releases
-> 下载系统对应架构的traefik(3.6.5)，解压后放在bin/app/traefik目录下
+> + 此处网关采用traefik 也可自行使用其它(nginx也可)
+> + 网关使用traefik，下载地址：https://github.com/traefik/traefik/releases
+> + 下载系统对应架构的traefik(3.6.5)，解压后放在bin/app/traefik目录下
 ```shell
 cd ovra-zero
 ./bin/traefik/traefik --configfile=./bin/traefik/traefik.yaml
@@ -55,3 +57,9 @@ cd ovra-zero
 VITE_GLOB_ENABLE_ENCRYPT=false
 VITE_GLOB_SSE_ENABLE=false
 ```
+
+## 联系方式 / 技术交流
+
+- **Telegram**：[@ovra12](https://t.me/ovra12)
+- **QQ**：2579260178（备注：`ovra-zero`）
+- **邮箱**：ut1221@icloud.com（标题：`[ovra-zero] : 简要说明问题`）

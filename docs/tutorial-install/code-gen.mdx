@@ -5,13 +5,25 @@ sidebar_position: 4
 
 ## JetBrains 插件
 
-**Atlas-Helper** 是一个基于 IntelliJ 平台的全栈代码生成插件，
-能够快速生成 **Java**、**Go**、**Vue** 项目代码，
-**完美适配若依（RuoYi）框架**，实现前后端一体化的高效开发体验。
+**Atlas-Helper** 是一款基于 **IntelliJ Platform** 的全栈代码生成插件，
+支持快速生成 **Java / Go / Vue** 项目代码，并对 **若依（RuoYi）生态** 进行了深度适配，
+实现前后端一体化的高效开发体验。
 
-> **插件目的**：作者在基于 RuoYi 写了一个 Golang 版本后端（[**ovra-zero**](https://github.com/cls-cloud/ovra-zero)）后，
-> 由于无法直接适配现有代码生成器，故开发了 **Atlas-Helper** 来进行高效的代码生成。
+### 插件背景
 
+> - 作者在基于 **RuoYi** 框架实现 Golang 后端版本（[**ovra-zero**](https://github.com/cls-cloud/ovra-zero)）的过程中
+>   发现现有代码生成器难以直接适配 Golang 及自定义项目结构。
+> - 因此开发了 **Atlas-Helper**，用于提升代码生成效率并统一工程规范。
+> - 插件模板仍在持续优化中，如有使用问题或改进建议，欢迎提交
+>   [Issues](https://github.com/cls-cloud/ovra-zero/issues) 或直接联系作者。
+> - 当前已支持的后端代码生成：
+>   - `RuoYi`（原版）
+>   - `RuoYi-Plus`
+>   - `go-zero`
+>     - 支持 **API 文件生成**
+>     - 数据层可配合 `gorm/gen` 直接生成
+>     - 生成后可在当前模块中直接执行 `make db-{module}` 进行代码构建(如 make db-system || make db-monitor 具体内容查看Makefile定义)
+> - 前端已实现 **vben5** 模板生成（需联系作者获取）。
 
 <div
     style={{
@@ -55,3 +67,11 @@ sidebar_position: 4
         title="JetBrains Plugin Install Button"
     />
 </div>
+
+## 使用方式
+
+1. 在 **GoLand / IntelliJ IDEA** 插件市场中搜索 **Atlas-Helper** 并安装。
+2. 使用 IDE 连接数据库。
+3. 在数据库表上 **右键** 即可看到插件入口并进行代码生成。
+
+> ⚠️ 当前版本仅支持 **单表代码生成**，多表及更复杂场景正在规划中。
